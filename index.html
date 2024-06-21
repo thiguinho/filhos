@@ -18,6 +18,13 @@
         .output {
             margin-top: 20px;
         }
+        .button {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -48,6 +55,17 @@
         <p id="outputPoderAtaque"></p>
         <p id="outputDefesa"></p>
     </div>
+    <div>
+        <button class="button" onclick="rollDice(4)">Roll d4</button>
+        <button class="button" onclick="rollDice(6)">Roll d6</button>
+        <button class="button" onclick="rollDice(8)">Roll d8</button>
+        <button class="button" onclick="rollDice(10)">Roll d10</button>
+        <button class="button" onclick="rollDice(12)">Roll d12</button>
+        <button class="button" onclick="rollDice(20)">Roll d20</button>
+        <button class="button" onclick="rollDice(100)">Roll d100</button>
+        <button class="button" onclick="rollDice(1000)">Roll d1000</button>
+    </div>
+    <div id="result" style="margin-top: 20px; font-size: 20px;"></div>
 </body>
 </html>
 <script src="meucodigo.js"></script>

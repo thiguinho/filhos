@@ -4,17 +4,15 @@ function atualizar() {
     let forca = parseInt(document.getElementById('forca').value);
     let agilidade = parseInt(document.getElementById('agilidade').value);
     let armadura = parseInt(document.getElementById('armadura').value);
-
-    // Atualizar Nome
+    //classificar o nome
     if (nivel <= 5) {
         nome += ' [INICIANTE]';
-    } else {
+    } 
+    if (nivel >=5) {
         nome += ' [VETERANO]';
     }
 
-    if (nivel >= 10){
-        nome += ' [MASTERS]'
-    }
+    
     // Atualizar Poder de Ataque
     let poderAtaque = (forca - 10) / 2 + nivel / 2;
 
@@ -26,4 +24,11 @@ function atualizar() {
     document.getElementById('outputPoderAtaque').textContent = 'Poder de Ataque: ' + poderAtaque;
     document.getElementById('outputDefesa').textContent = 'Defesa: ' + defesa;
 }
- atualizar();
+//rolagem de dado
+function rollDice(sides) {
+    const result = Math.floor(Math.random() * sides) + 1;
+    document.getElementById('result').innerText = `You rolled a d${sides}: ${result}`;
+}
+//chamar
+atualizar();
+rollDice();
